@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1066925334822",
+    "firebase_url": "https://insulin-pump-4dc28-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "insulin-pump-4dc28",
+    "storage_bucket": "insulin-pump-4dc28.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066925334822:android:f7babc3d5a021465f821e7",
+        "android_client_info": {
+          "package_name": "com.example.insulin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJOpWllPbOZ1ZTuJGCVObiQeN1g5UyA4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066925334822:android:6730a78e3d8ec9c5f821e7",
+        "android_client_info": {
+          "package_name": "com.example.insulin_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJOpWllPbOZ1ZTuJGCVObiQeN1g5UyA4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

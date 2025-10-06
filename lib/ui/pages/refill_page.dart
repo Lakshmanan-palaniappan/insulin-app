@@ -166,7 +166,7 @@ class _RefillPageState extends State<RefillPage> {
                               }
                             },
                             child: const Text(
-                              "Manual",
+                              "Ok",
                               style: TextStyle(fontSize: 15),
                             ),
                           ),
@@ -211,17 +211,22 @@ class _RefillPageState extends State<RefillPage> {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "INSTRUCTION 1:\n Remove the RESERVOIR and hit the\n start button to pull plunger",
+                  "STEP 1:\n Remove the RESERVOIR and p ress the calibrate button. ",
                   style: TextStyle(fontSize: 17),
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "INSTRUCTION 2: \n Insert the new loaded RESERVOIR and \n hit the Fill tube button to fill the gap \n between reservoir and needle. ",
+                  "STEP 2: \n Insert the new loaded RESERVOIR and hit the Manual Bolus button to fill the gap between the RESERVOIR and NEEDLE.",
                   style: TextStyle(fontSize: 17),
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "INSTRUCTION 3: \n If you don't notice any droplet from needle \n then, press Till Tip button again. ",
+                  "STEP 3: \n If you don't notice any droplet from needle then, press Manual Bolus button again. ",
+                  style: TextStyle(fontSize: 17),
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  "STEP 4: \n Attach patch to body ",
                   style: TextStyle(fontSize: 17),
                 ),
                 const SizedBox(height: 20),

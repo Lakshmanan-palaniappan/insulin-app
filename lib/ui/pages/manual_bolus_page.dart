@@ -101,7 +101,7 @@ class _ManualBolusPageState extends State<ManualBolusPage> {
                                     context: context,
                                     title: "Alert",
                                     message:
-                                    "Active insulin has already reached the limit.",
+                                    "Active insulin has already reached the limit. ",
                                   );
                                 } else {
                                   num newBolus =

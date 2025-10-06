@@ -47,8 +47,6 @@ class _ManualBolusPageState extends State<ManualBolusPage> {
                         ),
                       ),
                       const SizedBox(height: 25),
-
-                      // 🔹 Slider (steps: 0 to 10, integer only)
                       Slider(
                         value: sliderValue,
                         min: 0,
@@ -78,7 +76,6 @@ class _ManualBolusPageState extends State<ManualBolusPage> {
                                   ? null
                                   : () {
                                 if (sliderValue < 1) {
-                                  // ⚠️ Show alert if value < 1
                                   showDialog(
                                     context: context,
                                     builder: (context) => AlertDialog(

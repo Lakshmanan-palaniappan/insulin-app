@@ -40,11 +40,12 @@ class _RefillPageState extends State<RefillPage> {
               });
             },
             child: const Text(
-              "Rewind",
-              style: TextStyle(fontSize: 15),
+              "Manual",
+              style: TextStyle(fontSize: 15,
+              ),
             ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 6),
           OutlinedButton(
             onPressed: () {
               timerProvider.startTimer();
@@ -144,8 +145,16 @@ class _RefillPageState extends State<RefillPage> {
                           ),
                           FilledButton(
                             onPressed: () async {
-                              if (insulinProvider.insulinData!.activeInsulin >
-                                  219) {
+                              if (sliderval < 1) {
+                                showAlertDialog(
+                                  context: context,
+                                  title: "Alert",
+                                  message: "Please select at least 1 unit before rewinding.",
+                                );
+                                return;
+                              }
+
+                              if (insulinProvider.insulinData!.activeInsulin > 219) {
                                 showAlertDialog(
                                   context: context,
                                   title: "Alert",
@@ -157,10 +166,11 @@ class _RefillPageState extends State<RefillPage> {
                               }
                             },
                             child: const Text(
-                              "Rewind",
+                              "Manual",
                               style: TextStyle(fontSize: 15),
                             ),
                           ),
+
                         ],
                       ),
                     ],
@@ -365,38 +375,39 @@ class _RefillPageState extends State<RefillPage> {
           ),
         ),
       ),
-      floatingActionButton: Row(
-        children: [
-          Spacer(),
-          StreamBuilder(
-            stream: insulinProvider.isrewinding(),
-            builder: (context, asyncSnapshot) {
-              return ElevatedButton(
-                onPressed: (asyncSnapshot.hasData && asyncSnapshot.data!)
-                    ? null
-                    : () {
-                  if (asyncSnapshot.hasData && !asyncSnapshot.data!) {
-                    insulinProvider.turnOnManRewind();
-                  }
-                },
-                child: const Text(
-                  "Manual Rewind",
-                  style: TextStyle(fontSize: 16),
-                ),
-              );
+      // floatingActionButton: Row(
+      //   children: [
+      //     Spacer(),
+      //     IgnorePointer(
+      //       ignoring: true, // Disable press
+      //       child: ElevatedButton(
+      //         onPressed: () {},
+      //         style: ElevatedButton.styleFrom(
+      //           backgroundColor: Colors.grey, // Grey color
+      //         ),
+      //         child: const Text(
+      //           "Manual Rewind",
+      //           style: TextStyle(fontSize: 16),
+      //         ),
+      //       ),
+      //     ),
+      //     SizedBox(width: 10),
+      //     IgnorePointer(
+      //       ignoring: true, // Disable press
+      //       child: ElevatedButton(
+      //         onPressed: () {},
+      //         style: ElevatedButton.styleFrom(
+      //           backgroundColor: Colors.grey, // Grey color
+      //         ),
+      //         child: const Text(
+      //           "Fill tube",
+      //           style: TextStyle(fontSize: 16),
+      //         ),
+      //       ),
+      //     ),
+      //   ],
+      // ),
 
-            }
-          ),
-          SizedBox(width: 10),
-          ElevatedButton(
-            onPressed: insulinProvider.turnOnTillTip,
-            child: const Text(
-              "Fill tube",
-              style: TextStyle(fontSize: 16),
-            ),
-          ),
-        ],
-      ),
     );
   }
 }

@@ -26,9 +26,6 @@ class PumpDetailsCard extends StatelessWidget {
                 Text(
                   "Insulin Pump",
                 ),
-                Text(
-                  "TODO%",
-                ),
               ],
             ),
             const SizedBox(height: 8),

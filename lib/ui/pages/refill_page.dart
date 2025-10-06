@@ -211,7 +211,7 @@ class _RefillPageState extends State<RefillPage> {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "STEP 1:\n Remove the RESERVOIR and p ress the calibrate button. ",
+                  "STEP 1:\n Remove the RESERVOIR and Press the calibrate button. ",
                   style: TextStyle(fontSize: 17),
                 ),
                 const SizedBox(height: 20),
